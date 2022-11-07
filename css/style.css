@@ -790,6 +790,7 @@ a {
   transform: translate(-50%, -50%);
 
   width: 528px;
+  height: 581px;
 
   padding: 40px;
   background: #fff;
@@ -964,15 +965,24 @@ a {
 
 .check-label {
   position: relative;
-
+  display: flex;
   margin-bottom: 40px;
+  align-items: center;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+
+  letter-spacing: 0.03em;
+
+  color: #757575;
 }
 
 .check-wrapp {
   /* display: block; */
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   width: 16px;
   height: 15px;
   border: 2px solid #212121;
@@ -992,12 +1002,14 @@ a {
 } */
 
 .check-icon {
-  opacity: 0;
-  margin-right: 8.4px;
+  position: absolute;
+  display: none;
 }
 
 .input-check {
-  display: flex;
+  border: 2px solid #000000;
+  display: block;
+  /* display: flex; */
   position: absolute;
   width: 0;
   height: 0;
@@ -1006,14 +1018,34 @@ a {
   bottom: 0;
 }
 
-.input-check:checked + .check-wrapp {
+/* .input-check:checked {
   border: none;
+  background-color: #2196f3;
+} */
+
+.checkbox {
+  border-radius: 2px;
+  cursor: pointer;
+  margin-right: 7px;
+  border: 2px solid #000000;
 }
 
-.input-check:checked + .check-wrapp .check-icon {
-  opacity: 1;
+.input-check:checked + .checkbox {
+  border: none;
+  background-color: #2196f3;
+}
+
+.input-check:checked + .checkbox .checkbox-icon {
+  display: block;
 }
 
 .check-link {
-  text-decoration: underline;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+
+  color: #2196f3;
 }
